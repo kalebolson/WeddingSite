@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@300;500;700&family=Montserrat:wght@400;700&display=swap');
+.App {
+    font-family: 'Arima', cursive;
+
+}
+
+.Home{
+    position: fixed;
+    top: 0;
+    background-image: url("images/jk1.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.Gallery{
+    position: fixed;
+    top: 0;
+    background-image: url("images/jk2.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.Location{
+    position: fixed;
+    top: 0;
+    background-image: url("images/jk3.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.RSVP{
+    position: fixed;
+    top: 0;
+    background-image: url("images/jk4.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+
+.desktop-navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 235, 205, 0.308);
+    padding-top: 15px;
+}
+
+.desktop-tab {
+    background-color: rgba(194, 190, 180, 0.144);
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.desktop-tab:hover {
+    background-color: rgba(255, 225, 144, 0.336);
+    
+}
+
+.active {
+    background-color: rgba(250, 219, 133, 0.582) !important;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(219, 181, 76);
+    font-weight: bold;
+    width: 12em;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+hr {
+    margin-top: 0;
+}
+
+.header-section {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+.body-section {
+
+}
