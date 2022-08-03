@@ -8,10 +8,14 @@ export default function ContentContainer(props) {
 
     return(
         <section className='body-section'>
+            
             <Suspense fallback={<span>Loading...</span>}>
-                {contentComponent}
+                <div className='content-container'>
+                    {contentComponent}
+                </div>
             </Suspense>
             <div className={`${props.pageName}`}></div>
+            
         </section>
     )
 }

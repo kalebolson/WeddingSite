@@ -8,8 +8,8 @@ router.post('/', async (req, res) => {
         const newRSVP = new Rsvp(rsvp)
         var resItem;
 
-        var doc = await newRSVP.save();
         try {
+            var doc = await newRSVP.save();
             resItem = {
                 message: `"${doc.guestName}" saved successfully`,
                 content: doc
