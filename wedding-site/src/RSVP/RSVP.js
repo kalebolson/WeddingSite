@@ -1,18 +1,18 @@
-import { useState } from 'react'
+import useRSVPCtrl from './useRSVPCtrl';
 
 export default function RSVP() {
-    const [numRSVPs, setNumRSVPs] = useState(1);
+    var ctrl = useRSVPCtrl();
 
-    function handleGuestCountConfirm(event) {
-        // TODO
-    }
 
 
     return (
         <>
             <label htmlFor="count">Enter Number of Guests:</label>
-            <input type="number" name="count" min='1' max='10' value={numRSVPs} onChange={(e) => setNumRSVPs(e.target.value)}></input>
-            <button onClick={ handleGuestCountConfirm }>Confirm</button>
+            <input type="number" name="count" min='1' max='10' value={ctrl.numRSVPs} onChange={(e) => ctrl.setNumRSVPs(e.target.value)}></input>
+            <button onClick={ ctrl.handleGuestCountConfirm }>Confirm</button>
+            <div className='guest-rsvps'>
+                {ctrl.guestRSVPs}
+            </div>
         </>
     )
 }

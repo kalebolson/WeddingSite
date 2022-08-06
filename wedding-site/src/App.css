@@ -268,3 +268,38 @@ hr {
     border-radius: 25px;
     width: 50px;
 }
+
+.guest-rsvps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.guest-rsvp {
+    margin-top: 25px;
+    background-color: rgba(165, 165, 165, 0.514);
+    padding: 8px;
+    border-radius: 25px;
+}
+
+.guest-rsvp-field {
+    margin: 5px 0;
+}
+
+.guest-rsvp-field label {
+    margin-right: 7px;
+}
+
+.radio-btn-label {
+    margin-right: 0 !important;
+}
+
+.name-textbox {
+    line-height: 2em;
+}
+
+.add-space {
+    margin-right: 1em;
+}

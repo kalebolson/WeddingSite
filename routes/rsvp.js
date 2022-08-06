@@ -4,26 +4,28 @@ const Rsvp = require('../models/RSVP')
 
 
 router.post('/', async (req, res) => {
-    var resObj = await Promise.all(req.body.rsvps.map(async (rsvp) => {
-        const newRSVP = new Rsvp(rsvp)
-        var resItem;
-
-        try {
-            var doc = await newRSVP.save();
-            resItem = {
-                message: `"${doc.guestName}" saved successfully`,
-                content: doc
-            } 
+    const newRSVP = new Rsvp({
+        guestName: req.body.name,
+        attending: req.body.attending,
+        notes: req.body.notes
+    });
+    var resObj;
+    
+    try {
+        var doc = await newRSVP.save();
+        resObj = {
+            message: `"${doc.guestName}" saved successfully`,
+            content: doc
+        } 
+    }
+    catch (err) {
+        resObj = {
+            message: err
         }
-        catch (err) {
-            resItem = {
-                message: err
-            }
-        }
-        return resItem;
-    }));
-    res.json(resObj)
+    }
+    res.json(resObj);
 })
+
 
 
 module.exports = router

@@ -62,11 +62,27 @@ const services = () => {
         }
     }
 
+    const rsvp = async (args) => {
+        try {
+            const response = await fetch ('/api/rsvp/', {
+                method: 'POST',
+                headers: new Headers ({ "Content-Type": "application/json" }),
+                body: JSON.stringify(args)
+            }).then(res => res.json());
+
+            return response;
+        }
+        catch (e) {
+            return { error: e }
+        }
+    }
+
     return {
         postPhoto,
         getPhotos,
         likePhoto,
-        unLikePhoto
+        unLikePhoto,
+        rsvp
     }
 }
 
