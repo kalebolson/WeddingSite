@@ -43,7 +43,7 @@ export default function ImageBox(props) {
 
     return (
         <div className='img-item'>
-            <div className='img-box' onClick={props.openImage(props.id)}>
+            <div className='img-box' onClick={(e) => props.openImage(props.id)}>
                 <img src={props.url} />
             </div>
             <div className='img-icons'>
@@ -52,11 +52,11 @@ export default function ImageBox(props) {
                     onMouseOver={e => likeHover(e)}
                     onMouseLeave={e => likeOffHover(e)}
                     onMouseDown={e => likeClick(e)}/> 
-                    <i>{likes}</i>
+                    <i>{likes > 0 ? likes : ''}</i>
                 </div>
-                <div className='img-icon'>
+                {/* <div className='img-icon'>
                     <img src={commentImg} className='comment-img' /><i>{commentCountString}</i>
-                </div>
+                </div> */}
             </div>
         </div>
     )

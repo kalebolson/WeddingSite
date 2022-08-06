@@ -10,7 +10,7 @@ export default function Tab(props) {
     })
 
     return (
-        <div className={`desktop-tab ${ match ? 'active' : ''}`}>
+        <div className={`desktop-tab ${ match ? 'active-desktop-tab' : ''}`}>
             <Link to={ props.route }>{ props.title }</Link>
         </div>
     )
