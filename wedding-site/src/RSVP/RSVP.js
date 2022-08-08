@@ -9,7 +9,6 @@ export default function RSVP() {
         <>
             <label htmlFor="count">Enter Number of Guests:</label>
             <input type="number" name="count" min='1' max='10' value={ctrl.numRSVPs} onChange={(e) => ctrl.setNumRSVPs(e.target.value)}></input>
-            <button onClick={ ctrl.handleGuestCountConfirm }>Confirm</button>
             <div className='guest-rsvps'>
                 {ctrl.guestRSVPs}
             </div>

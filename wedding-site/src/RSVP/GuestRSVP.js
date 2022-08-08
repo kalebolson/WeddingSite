@@ -19,18 +19,18 @@ export default function GuestRSVP(props) {
     return (
         <div className='guest-rsvp'>
             <div className='guest-rsvp-field'>
-                <label for='name'>Name:</label>
+                <label htmlFor='name'>Name:</label>
                 <input id='name' type="text" onChange={e => setName(e.target.value)} className='name-textbox'></input>
             </div>
             <div className='guest-rsvp-field'>
-                <label for='attending'>Attending:</label>
-                    <label for='yes' className='radio-btn-label'>Yes</label>
+                <label htmlFor='attending'>Attending:</label>
+                    <label htmlFor='yes' className='radio-btn-label'>Yes</label>
                     <input name='attending' id='yes' type="radio" onClick={e => attendingChanged(true)} className='add-space'></input>
-                    <label for='no' className='radio-btn-label'>No</label>
+                    <label htmlFor='no' className='radio-btn-label'>No</label>
                     <input name='attending' id='no' type="radio" onClick={e => attendingChanged(false)}></input>
             </div>
             <div className='guest-rsvp-field'>
-                <label for='notes'>Notes:</label>
+                <label htmlFor='notes'>Notes / Dietary Restrictions:</label><br/>
                 <textarea name='notes' type="text" onChange={e => setNotes(e.target.value)}></textarea>
             </div>
             <div className='guest-rsvp-field'>
