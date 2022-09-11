@@ -5,7 +5,7 @@ import services from '../services';
 export default function useRSVPCtrl() {
     const s = services();
 
-    const [numRSVPs, setNumRSVPs] = useState(1);
+    const [numRSVPs, setNumRSVPs] = useState(0);
     const [guestRSVPs, setGuestRSVPs] = useState();
 
     function handleGuestCountChange(event) {
@@ -41,17 +41,36 @@ export default function useRSVPCtrl() {
 
     }
 
-    function sendRSVP(args) {
-        s.rsvp(args);
+    async function nameLookup(name) {
+        var data = await s.rsvpNameLookup({ name });
+        displayGuestRSVPs(data);
     }
 
-    useEffect(() => {
-        handleGuestCountChange();
-    }, [numRSVPs])
+    function displayGuestRSVPs(data) {
+        var tempRSVPs = [];
+
+        data.map(rsvp => {
+            tempRSVPs.push(
+                <GuestRSVP key={rsvp._id} send={sendRSVP} rsvp={rsvp} />
+            )
+        });
+
+        setGuestRSVPs(tempRSVPs);
+    }
+
+    function sendRSVP(args) {
+        var res = s.rsvp(args);
+        return !res.error;
+    }
+
+    // useEffect(() => {
+    //     handleGuestCountChange();
+    // }, [numRSVPs])
 
     return {
         numRSVPs,
         setNumRSVPs,
-        guestRSVPs
+        guestRSVPs,
+        nameLookup
     }
 }

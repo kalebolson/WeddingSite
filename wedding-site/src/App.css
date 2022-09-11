@@ -213,7 +213,7 @@ hr {
     color: white;
 }
 
-.img-splash-guard {
+.splash-guard {
     position: fixed;
     top: 0;
     left: 0;
@@ -258,6 +258,30 @@ hr {
     display: inline-block;
 }
 
+.init-rsvp-section {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+.init-rsvp-input-section {
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.init-rsvp-name {
+    box-sizing: border-box;
+    height: 40px;
+    margin-right: 5px;
+}
+
+.init-rsvp-enter {
+    height: 40px;
+}
+
 .close-btn {
     display: inline-block;
     position: absolute;
@@ -292,14 +316,50 @@ hr {
     margin-right: 7px;
 }
 
+.guest-rsvp-field h3 {
+    margin: 5px;
+}
+.guest-rsvp-field-plusone-input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5em;
+    box-sizing: border-box;
+}
+
 .radio-btn-label {
     margin-right: 0 !important;
 }
 
 .name-textbox {
-    line-height: 2em;
+    
 }
 
 .add-space {
     margin-right: 1em;
+}
+
+.thx-rsvp {
+    margin: auto;
+}
+
+.thx-rsvp-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.err-content {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    max-width: 90vw;
+    margin: 10vh auto;
+    background-color: white;
+    padding: 1em 3em;
+}
+.err-content h3 {
+    font-size: x-large;
+    color: rgb(255, 1, 1);
 }

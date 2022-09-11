@@ -1,7 +1,10 @@
-
+import PubSub from "pubsub-js";
 
 const services = () => {
 
+    const publishError = (message) => {
+        PubSub.publish("error", message);
+    }
 
     const postPhoto = async (photo) => {
         const formData = new FormData();
@@ -15,7 +18,7 @@ const services = () => {
             return response;
         }
         catch (e) {
-            return { error: e }
+            publishError(e)
         }
     }
 
@@ -28,7 +31,7 @@ const services = () => {
             return response.images;
         }
         catch (e) {
-            return { error: e }
+            publishError(e)
         }
     }
 
@@ -43,7 +46,7 @@ const services = () => {
             return response;
         }
         catch (e) {
-            return { error: e }
+            publishError(e)
         }
     }
 
@@ -58,7 +61,7 @@ const services = () => {
             return response;
         }
         catch (e) {
-            return { error: e }
+            publishError(e)
         }
     }
 
@@ -73,16 +76,37 @@ const services = () => {
             return response;
         }
         catch (e) {
-            return { error: e }
+            publishError(e)
+        }
+    }
+
+    const rsvpNameLookup = async (args) => {
+        try {
+            const response = await fetch (`/api/rsvp?name=${args.name}`, {
+                method: 'GET',
+                headers: new Headers ({ "Content-Type": "application/json" })
+            }).then(async res => {
+                var data = res.json();
+                if (res.status >= 400) throw await data;
+
+                return data;
+            });
+            
+            return response;
+        }
+        catch (e) {
+            publishError(e)
         }
     }
 
     return {
+        publishError,
         postPhoto,
         getPhotos,
         likePhoto,
         unLikePhoto,
-        rsvp
+        rsvp,
+        rsvpNameLookup
     }
 }
 

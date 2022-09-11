@@ -3,7 +3,7 @@ import closeBtnImg from '../images/close-round-icon.svg'
 const ImageProjection = (props) => {
 
     return (
-        <div className='img-splash-guard'>
+        <div className='splash-guard'>
             <div className="img-proj-content">
                 <div className='open-img'>
                     <img src={props.image.url} />

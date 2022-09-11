@@ -9,6 +9,7 @@ import {
 from 'react-router-dom'
 import ContentContainer from './ContentContainer/ContentContainer'
 import tabContentBinding from './tabContentBinding';
+import ErrorHandler from './ErrorHandler';
 
 function App() {
   const ctrl = useAppCtrl();
@@ -35,7 +36,7 @@ return (
       </Routes>
 
     </BrowserRouter>
-    
+    <ErrorHandler />
   </div>
 );
 }

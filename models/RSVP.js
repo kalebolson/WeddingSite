@@ -8,11 +8,23 @@ const RSVPSchema = new Schema({
     },
     attending: {
         type: Boolean,
-        required: true
+        required: false
     },
     notes: {
         type: String,
         required: false
+    },
+    groupID: {
+        type: String,
+        required: true
+    },
+    completed: {
+        type: Boolean,
+        default: false
+    },
+    isPlusOne: {
+        type: Boolean,
+        default: false
     }
 })
 
