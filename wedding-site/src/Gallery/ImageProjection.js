@@ -7,10 +7,6 @@ const ImageProjection = (props) => {
             <div className="img-proj-content">
                 <div className='open-img'>
                     <img src={props.image.url} />
-                    {/* <div className='clickable-areas'>
-                        <div className='clickable-area' onMouseDown={e => props.prev()}></div>
-                        <div className='clickable-area' onMouseDown={e => props.next()}></div>
-                    </div> */}
                 </div>
                 <div className='comments-section'>
 

@@ -5,6 +5,7 @@ var rsvpRoute = require('./routes/rsvp')
 var photosRoute = require('./routes/photos')
 var bodyParser = require('body-parser')
 const fileUpload = require('express-fileupload')
+var path = require('path')
 
 require('dotenv').config({ path: './config/config.env' })
 
@@ -22,19 +23,16 @@ app.use(fileUpload({
 
 app.use('/api/rsvp', rsvpRoute)
 app.use('/api/photos', photosRoute)
-app.use('/api/photos/test', (req, res) => {
-    console.log('anything')
-    console.log(req.body)
-    res.send(true)
-})
-
 
 const port = process.env.PORT
 
-if (process.env.DEV){
-    // do something in dev?
-} else {
-    app.use(express.static('./wedding-site/build/'))
+console.log('Environment:', process.env.ENV);
+
+if (process.env.ENV === 'PROD'){
+    app.use(express.static(path.join(__dirname, 'wedding-site', 'build')));
+    app.get("/*", (req, res) => {
+        res.sendFile(path.join(__dirname, 'wedding-site', 'build', 'index.html'));
+    });
 }
 
 

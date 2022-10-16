@@ -54,9 +54,6 @@ export default function ImageBox(props) {
                     onMouseDown={e => likeClick(e)}/> 
                     <i>{likes > 0 ? likes : ''}</i>
                 </div>
-                {/* <div className='img-icon'>
-                    <img src={commentImg} className='comment-img' /><i>{commentCountString}</i>
-                </div> */}
             </div>
         </div>
     )

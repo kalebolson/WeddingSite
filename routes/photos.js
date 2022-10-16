@@ -45,7 +45,6 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         const images = await ImgUrl.find();
-        console.log(images)
         res.send({images});
     }
     catch (e){
