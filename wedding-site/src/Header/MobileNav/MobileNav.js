@@ -1,4 +1,5 @@
 import tabContentBinding from '../../tabContentBinding'
+import logo from '../../images/logo.svg';
 
 import {
     useMatch,
@@ -9,9 +10,15 @@ export default function MobileNav() {
     var mobileTabs = Object.entries(tabContentBinding).map(([key, value]) => <MobileTab key={ key } title={ key } route={ value.route }/>)
 
     return (
-        <div className='mobile-navbar'>
-            {mobileTabs}
+        <div className='flex'>
+            <div className='mobile-logo'>
+                <img src={logo}></img>
+            </div>
+            <div className='mobile-navbar'>
+                {mobileTabs}
+            </div>
         </div>
+
     )
 }
 
