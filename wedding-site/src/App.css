@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Arima:wght@300;500;700&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arima:wght@300;500;700&family=Bellefair&family=Dancing+Script:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 .App {
-    font-family: 'Arima', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-size: larger;
     max-height: 100vh;
     max-width: 100vw;
 }
@@ -241,13 +242,14 @@ hr {
     cursor: pointer;
     border: 2px rgb(185, 185, 185) outset;
     border-radius: 10px;
-    /* filter: drop-shadow(5px 5px 5px black); */
+    filter: drop-shadow(5px 5px 5px black);
     text-decoration: none;
     background-color: rgba(247, 222, 155, 0.712);
     padding: 15px 20px;
     margin-bottom: 1em;
     font-size:larger;
     font-weight: bold;
+    font-family: 'Dancing Script', cursive;
     color: white;
 }
 
@@ -400,4 +402,64 @@ hr {
 .err-content h3 {
     font-size: x-large;
     color: rgb(255, 1, 1);
+}
+
+.home-page {
+    text-align: center;
+}
+
+.headline {
+    display:flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+.headline-item {
+    display: inline-block;
+    width: 250px;
+}
+span.headline-item  {
+    border: 2px outset whitesmoke;
+    height: 120px;
+}
+h2.headline-item {
+    font-family: 'Bellefair', cursive;
+    font-weight: lighter;
+    font-size: 6em;
+}
+.headline-item-and {
+    /* font-family: 'Arima', cursive !important; */
+    font-family: 'Dancing Script', cursive !important;
+}
+
+.tagline {
+    font-size: 2.5em;
+    position: relative;
+    top: 50px;
+}
+
+.home-date {
+    font-size: 3em;
+}
+
+.home-location {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+.home-location-name {
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+.home-location-city {
+
+}
+.straight-font {
+    font-family: 'Bellefair', cursive;
+}
+.curvy-font {
+    font-family: 'Dancing Script', cursive;
 }

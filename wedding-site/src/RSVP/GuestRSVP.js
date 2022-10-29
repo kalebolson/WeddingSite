@@ -34,12 +34,10 @@ export default function GuestRSVP(props) {
     const handleSubmit = (event) => {
         if (props.send({ name, attending, notes })){
             setSubmitted(true);
-            console.log('set complete true')
         }
         else
         {
             setError(true);
-            console.log('set error true')
         }
 
     }

@@ -13,13 +13,13 @@ import ErrorHandler from './ErrorHandler';
 
 function App() {
   const ctrl = useAppCtrl();
-
-  const routes = Object.entries(tabContentBinding).map(
+  const tabContents = tabContentBinding({ rootCtrl: ctrl })
+  const routes = Object.entries(tabContents).map(
     ([key, value]) => {
       return <Route
       key={key}
       path={value.route}
-      element={<ContentContainer content={ value } pageName={ key } />}
+      element={<ContentContainer content={ value } pageName={ key } rootCtrl={ ctrl } />}
       />
     }
   )
@@ -28,7 +28,7 @@ return (
   <div className="App">
     <BrowserRouter>
 
-      <Header parent={ctrl} />
+      <Header rootCtrl={ctrl} tabContents={tabContents} />
       <hr />
 
       <Routes>

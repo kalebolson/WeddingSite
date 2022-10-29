@@ -6,8 +6,8 @@ import {
     Link
 } from 'react-router-dom'
 
-export default function MobileNav() {
-    var mobileTabs = Object.entries(tabContentBinding).map(([key, value]) => <MobileTab key={ key } title={ key } route={ value.route }/>)
+export default function MobileNav({ tabContents }) {
+    var mobileTabs = Object.entries(tabContents).map(([key, value]) => <MobileTab key={ key } title={ key } route={ value.route }/>)
 
     return (
         <div className='flex'>

@@ -44,7 +44,6 @@ const useGalleryCtrl = () => {
     useEffect(() => {
         (async () => {
             var debugImages = await s.getPhotos()
-            console.log(debugImages);
             setImages(debugImages);
         })()
         
