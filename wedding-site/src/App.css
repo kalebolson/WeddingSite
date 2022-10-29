@@ -434,14 +434,46 @@ h2.headline-item {
     font-family: 'Dancing Script', cursive !important;
 }
 
+.headline-mobile {
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.headline-item-mobile {
+    display: inline-block;
+    height: 0px;
+}
+h2.headline-item-mobile {
+    font-family: 'Bellefair', cursive;
+    font-weight: lighter;
+    font-size: 3em;
+}
+.headline-item-and-mobile {
+    /* font-family: 'Arima', cursive !important; */
+    font-family: 'Dancing Script', cursive !important;
+}
+
 .tagline {
     font-size: 2.5em;
     position: relative;
     top: 50px;
 }
+.tagline-mobile {
+    font-size: 2em;
+    position: relative;
+    top: 20px;
+}
 
 .home-date {
     font-size: 3em;
+}
+.home-date-mobile {
+    position: relative;
+    font-size: 2em;
+    top: 1em;
 }
 
 .home-location {
@@ -449,6 +481,12 @@ h2.headline-item {
     display: flex;
     flex-direction: column;
     font-size: 1.5em;
+}
+.home-location-mobile {
+    margin-top: 4.5em;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
 }
 .home-location-name {
     font-weight: bolder;

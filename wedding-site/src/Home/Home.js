@@ -14,13 +14,13 @@ export default function Home(props) {
         locationCity: 'home-location-city straight-font'
     }
     const mobileClasses = {
-        tagline: 'tagline',
-        headline: 'headline',
-        kaleb: 'headline-item',
-        and: 'headline-item headline-item-and',
-        jessi: 'headline-item',
-        date: 'home-date',
-        location: 'home-location',
+        tagline: 'tagline-mobile',
+        headline: 'headline-mobile',
+        kaleb: 'headline-item-mobile',
+        and: 'headline-item-mobile headline-item-and',
+        jessi: 'headline-item-mobile',
+        date: 'home-date-mobile',
+        location: 'home-location-mobile',
         locationName: 'home-location-name straight-font',
         locationStreet: 'home-location-street straight-font',
         locationCity: 'home-location-city straight-font'
